@@ -1,6 +1,6 @@
 
 # 前端菜鸟技术分享 
----
+
 **目录**
 
 - Git常用命令行及个人使用经验
@@ -28,7 +28,7 @@
 ```javascript
  git add .
  git commit -m 'commit code'
- git checkoout master 
+ git checkout master 
  git merge dev
 ```
 
