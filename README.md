@@ -19,14 +19,18 @@
         default: "EXAMINATION_PREVIEW"
     }            
 ```
+
 在father组件中调用时就可以根据不同的业务模式传入不同的mode属性值就可以控制试卷组件的业务模式。
+
 ```javascript
     <examination
         mode="EXAMINATION_TEST"
     >
     </examination>                    
 ```
+
 同样的，对于考试卷的具体业务需求和功能实现的必须数据，可相对应的增加其他`props`属性：
+
 ```javascript
         props: {
             //只读模式
@@ -62,7 +66,9 @@
             }
         }
 ```
+
 father组件调用如下：
+
 ```javascript
     <!-- 2.学生做题 -->
     <examination
@@ -76,6 +82,7 @@ father组件调用如下：
 ```
 
 >考试组件的内容其实就是题目，抽象一下就是一个一个的题目组件生成的考试卷，那我们就可以把题目抽象为一个单独的`试题组件`:
+
 
 ```javascript
         props: {
@@ -111,7 +118,9 @@ father组件调用如下：
        }
 ```
 
+
 >我们通过遍历试卷的`configData`来生成整张试卷：
+
 
 ```javascript
         <div :class="readonly ? 'examination__body examination__body--readonly' : 'examination__body'"
